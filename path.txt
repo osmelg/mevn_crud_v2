@@ -1,0 +1,17 @@
+Crud utilizando bcrypt y jwt para el login/logout
+NEEDS
+    . Crear login - DONE
+    . Activar local storage - DONE
+    . Veririficar rutas en el front - DONE
+    . crear los success en el front - DONE
+    . crear los errores en el front - DONE
+    . Limpiar los tokens al expirar - DONE
+    . Cerrar sesion - DONE
+    . Refactorizar front, dividir en componentes - DONE
+    . hacer test de mostrar datos del usuario en el dashboard - DONE
+    . Crear signup - DONE
+    . Crear las validaciones en el front - DONE
+    . Crear notificaciones pretty - DONE
+    . Finalizar diseño web y mobile
+    . Crear un boton en el index que muestre un modal con todos los features
+    . Hacer deploy y subir al portafolio
