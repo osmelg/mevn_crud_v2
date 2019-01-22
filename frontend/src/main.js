@@ -11,25 +11,25 @@ Vue.config.productionTip = false
   Vue.use(VeeValidate);
 // Validaciones VeeValidate
   const dictionary = {
-    spa:{
+    en:{
       custom: {
         nombre: {
-          required:'Debe colocar un nombre'
+          required:'Type a name'
         },
         email: {
-          email:'Introduzca un email valido',
-          required:'Debe colocar un email',
+          email:'Type a valid email',
+          required:'Type a email',
         },
         password: {
-          required:'Debe colocar un password',
-          min_value:'La contraseña debe tener al menos 2 digitos'
+          required:'Type a password',
+          min_value:'Password min 2 digits'
         }
       }    
     }
   };
   Validator.localize(dictionary);
   const validator = new Validator();
-  validator.localize('spa'); 
+  validator.localize('en'); 
 
 
 new Vue({
