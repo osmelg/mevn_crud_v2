@@ -5,7 +5,7 @@
         <div class="headerNav">
             <router-link to='/dashboard' class="headerNavLeft">Volver</router-link>
             <p class="headerNavCenter">Super Mevn Crud</p>
-            <p class="headerNavRight">Welcome: Osmel</p>
+            <p class="headerNavRight">Welcome: Osmel.</p>
             <!-- <img class="headerContainerLogout" src="logout.svg" alt=""> -->
         </div>
         <p class="headerContainerSubTitle">Create a post</p>
