@@ -1,6 +1,6 @@
 <template>
     <div>
-        <button v-on:click.prevent="cerrarSesion">Cerrar Sesion</button>
+        <button type="submit" v-on:click.prevent="cerrarSesion" class="bodyContainerButtonSubmit"><img type='submit' src="../assets/images/logout.svg" class="bodyContainerButton"></button>
     </div>
 </template>
 
@@ -19,7 +19,7 @@ export default {
             timer: 3000
             });
             toast({
-            type: 'success',
+            type: 'info',
             title: 'Vuelva Pronto'
             })
             this.$router.push('/login');
@@ -30,5 +30,6 @@ export default {
 </script>
 
 <style>
-
+.bodyContainerButtonSubmit                  {border: none; cursor: pointer; background: url(../assets/images/login.svg);}
+.bodyContainerButton                        {height: 5em; text-align: center; margin-top: 1em; cursor: pointer;}
 </style>
