@@ -3,7 +3,7 @@
         <div class="headerGrid">
             <div class="headerContainer">
                 <p class="headerContainerTitle">Mevn Super Crud</p>
-                <button class="headerContainerButton">Features</button>
+                <button class="headerContainerButton" v-on:click="features">Features</button>
             </div>
         </div>
         <div class="bodyGrid">
@@ -37,6 +37,14 @@ export default {
         }
     },
     methods:{
+        features(){
+            console.log('hola');
+            this.Swal.fire(
+                'Features',
+                'Html - Css - Vuejs - Veevalidate - Sweetalert2 - NodeJs - ExpressJs - Mongoose - Mongodb - Bcrypt - JsonWebTokens',
+                'info'
+                )
+        },
         postUsuario(){
             this.$validator.validateAll().then(res=>{
                 if(res) {
