@@ -102,7 +102,7 @@
                 res.send('Bienvenido al Back End de el Mevn Crud Completo + Bcrypt + JWT');
             })
         // POST (crear un comentario)
-            app.post('/dashboard/crearcomentario',(req,res)=>{
+            app.post('/dashboard/crearcomentario',checkAuth,(req,res)=>{
                 const comentario = new Comentarios();
                       comentario.titulo = req.body.titulo;
                       comentario.comentario = req.body.comentario;
@@ -126,7 +126,7 @@
                     })
             })
         // GET (Obtener un comentario)
-            app.get('/dashboard/comentario/:id', function(req,res){
+            app.get('/dashboard/comentario/:id',checkAuth,(req,res)=>{
                 Comentarios.findOne({
                     _id:req.params.id
                 })
@@ -140,7 +140,7 @@
                 })
             })            
         // PUT - (Actualizar comnetario)
-            app.put('/dashboard/comentario/:id',(req,res)=>{
+            app.put('/dashboard/comentario/:id',checkAuth,(req,res)=>{
                 Comentarios.findOneAndUpdate({
                     _id:req.params.id
                 },
@@ -153,7 +153,7 @@
                 })
             })
         // DELETE 
-            app.delete('/dashboard/comentario/:id',(req,res)=>{
+            app.delete('/dashboard/comentario/:id',checkAuth,(req,res)=>{
                 Comentarios.findOneAndDelete({
                     _id:req.params.id
                 },(error,comentarioEliminado)=>{
@@ -164,7 +164,6 @@
                     }
                 })
             }) 
-
 // Mongoose
     mongoose.connect('mongodb://localhost/mevn_crud_login_bcrypt_jwt',{useNewUrlParser:true},(error)=>{
         if(error){
