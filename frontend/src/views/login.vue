@@ -2,8 +2,8 @@
     <div class="grid">
         <div class="headerGrid">
             <div class="headerContainer">
-            <p class="headerContainerTitle">Mevn Super Crud</p>
-            <button class="headerContainerButton">Features</button>
+                <p class="headerContainerTitle">Mevn Super Crud</p>
+                <button class="headerContainerButton">Features</button>
             </div>
         </div>
         <div class="bodyGrid">
@@ -25,12 +25,10 @@
         </div>  
     </div>
 </template>
-
 <script>
 /* eslint-disable */
 import axios from "axios";
 import router from "../router";
-
 export default {
     data(){
         return{
@@ -67,7 +65,7 @@ export default {
                         if(error.response.data.rs === 'emailIncorrecto'){
                             const toast = this.$swal.mixin({
                             toast: true,
-                            position: 'top-end',
+                            position: 'top',
                             showConfirmButton: false,
                             timer: 3000
                             });
@@ -78,7 +76,7 @@ export default {
                         }else if (error.response.data.rs === 'errorIncriptacion'){
                             const toast = this.$swal.mixin({
                             toast: true,
-                            position: 'top-end',
+                            position: 'top',
                             showConfirmButton: false,
                             timer: 3000
                             });
@@ -89,7 +87,7 @@ export default {
                         }else if (error.response.data.rs === 'passwordIncorrecto'){
                             const toast = this.$swal.mixin({
                             toast: true,
-                            position: 'top-end',
+                            position: 'top',
                             showConfirmButton: false,
                             timer: 3000
                             });
@@ -100,7 +98,7 @@ export default {
                         }else{
                             const toast = this.$swal.mixin({
                             toast: true,
-                            position: 'top-end',
+                            position: 'top',
                             showConfirmButton: false,
                             timer: 3000
                             });
@@ -113,7 +111,7 @@ export default {
                 } else {
                     const toast = this.$swal.mixin({
                     toast: true,
-                    position: 'top-end',
+                    position: 'top',
                     showConfirmButton: false,
                     timer: 3000
                     });
@@ -127,14 +125,12 @@ export default {
     }
 }
 </script>
-
-<style>
+<style >
 /* General */
     *                                           {margin: 0; padding: 0; font-size: 10px;}
     @font-face                                  {font-family: one; src: url('../assets/fonts/Oxygen-Bold.ttf');}
     @font-face                                  {font-family: two; src: url('../assets/fonts/Oxygen-Light.ttf');}
     body                                        {background: url('../assets/images/bg.svg') no-repeat 50% 50% fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
-    .bodyContainerButtonSubmit                  {border: none; cursor: pointer; background: url(../assets/images/login.svg);}
     .errors                                     {font-size: 2em; color: #cfcfcf;}
 /* Layout */
     .grid                                       {height: 100vh; display: grid; grid-template-areas: "headerGrid" "bodyGrid" "footGrid"; } 
@@ -147,6 +143,7 @@ export default {
           .bodyContainerTitle                   {color: #fff; font-size: 3.6em; font-family: two;}
           .bodyContainerInput                   {width:50vw; height: 3em; text-align: center; font-size: 1.1em; padding: 1em; margin-top: 1em; border: 1px solid #B1B1B1; border-radius: 20px;}
           .bodyContainerButton                  {height: 5em; text-align: center; margin-top: 1em; cursor: pointer;}
+          .bodyContainerButtonSubmit            {border: none; cursor: pointer; background: url(../assets/images/login.svg);}
       .footGrid                                 {height: 5vh; display: grid; grid-area: footGrid;}
         .footContainer                          {height: 100%; display: grid; justify-items: center; align-items: center;}
           .footContainerTitle                   {color: #ffffff; font-size: 2em; font-family:dos;}          

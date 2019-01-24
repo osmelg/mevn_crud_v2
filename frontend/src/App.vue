@@ -4,6 +4,5 @@
   </div>
 </template>
 
-<style >
-/* *{font-size: 10px;} */
+<style>
 </style>
