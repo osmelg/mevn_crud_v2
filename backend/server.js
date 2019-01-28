@@ -45,7 +45,7 @@
                                 },
                                 process.env.JWT_KEY,
                                 {
-                                    expiresIn: "300s"
+                                    expiresIn: "600s"
                                 }
                             );
                             return res.status(200).json({
@@ -99,14 +99,13 @@
     // CRUD
         // Home
             app.get('/',(req,res) =>{
-                res.send('Bienvenido al Back End de el Mevn Crud Completo + Bcrypt + JWT');
+                res.send('Bienvenido al mevn_crud_v2');
             })
         // POST (crear un comentario)
             app.post('/dashboard/crearcomentario',checkAuth,(req,res)=>{
                 const comentario = new Comentarios();
                       comentario.titulo = req.body.titulo;
                       comentario.comentario = req.body.comentario;
-                      comentario.creadoEn = new Date();
                       comentario.save(function(error){
                         if (error){res.json({rs:'errorCrearComentario'});
                         }else{
@@ -165,7 +164,7 @@
                 })
             }) 
 // Mongoose
-    mongoose.connect('mongodb://localhost/mevn_crud_login_bcrypt_jwt',{useNewUrlParser:true},(error)=>{
+    mongoose.connect('mongodb://localhost/mevn_crud_v2',{useNewUrlParser:true},(error)=>{
         if(error){
             throw error;
         }else{

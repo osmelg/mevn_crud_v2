@@ -25,7 +25,7 @@ export default {
         axios
         .get('http://localhost:3000/dashboard',{
                 headers: {
-                    Authorization: 'Bearer '+ localStorage.getItem('token')
+                    Authorization: `Bearer ${localStorage.getItem('token')}`
                 },
             })     
         .then(response =>{
@@ -33,7 +33,6 @@ export default {
         })
         .catch(error =>{
             if(error.response.data.rs === 'tokenExpired'){
-            // alert('tokenExpired');
             this.$router.push('/login');
             localStorage.removeItem('token');
             }else if (error.response.data.rs === 'getComentariosError'){
