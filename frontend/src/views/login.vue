@@ -20,7 +20,7 @@
         </div>
         <div class="footGrid">
             <div class="footContainer">
-            <a class="footContainerTitle" href="www.osmel.tk">www.osmel.tk</a>
+            <a class="footContainerTitle" href="https://ogportfolio.herokuapp.com/">www.osmel.tk</a>
             </div>
         </div>  
     </div>
@@ -144,7 +144,7 @@ export default {
       .headerGrid                               {height: 15vh; display: grid; grid-area: headerGrid;}
         .headerContainer                        {height: 100%; display: grid; justify-items: center; align-items: center;}
           .headerContainerTitle                 {color: #ffffff; font-size: 4.5em; font-family: one;}
-          .headerContainerButton                {padding: 0.5em; font-family: helvetica; font-size: 1.5em; border: none; cursor: pointer;}
+          .headerContainerButton                {background: #6f81ad; color: #fff; padding: 0.5em; font-family: helvetica; font-size: 1.5em; border: none; cursor: pointer;}
       .bodyGrid                                 {height: 80vh; display: grid; grid-area: bodyGrid;}
         .bodyContainer                          {height: 100%; text-align: center; display: flex; justify-content: center; align-items: center; flex-direction: column;}
           .bodyContainerTitle                   {color: #fff; font-size: 3.6em; font-family: two;}
