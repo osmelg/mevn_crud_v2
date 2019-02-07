@@ -171,3 +171,45 @@
             console.log('conectado a mongoDB');
         }
     })
+        // POST (SIGN UP) BACKUP
+            // router.post('/signup',upload.single('fotoPerfil'), (req, res) => {
+            //     Usuarios.find({email: req.body.email})
+            //         .exec()
+            //         .then(usuario => {
+            //             if (usuario.length >= 1) {
+            //                 return res.status(401).json({
+            //                     rs: 'emailExiste'
+            //                 })
+            //             } else if (usuario.length < 1){
+            //                 bcrypt.hash(req.body.password, 10, (error, passwordCifrado) => {
+            //                     if (error) {
+            //                         return res.status(500).json({rs:'errorEncriptacion'})
+            //                     } if(passwordCifrado) {
+            //                         const usuario = new Usuarios();
+            //                         usuario.nombre = req.body.nombre;
+            //                         // Validacion de insercion de imagen
+            //                         if (usuario.fotoPerfil === undefined){
+            //                             usuario.fotoPerfil = 'upload\\O s m e L.jpg';
+            //                         }else{
+            //                             usuario.fotoPerfil = req.file.path;    
+            //                         }
+            //                         usuario.email = req.body.email;
+            //                         usuario.password = passwordCifrado;
+            //                         usuario.confirmacionCuenta = false;
+            //                         usuario.save(function (error) {
+            //                             if (error) {
+            //                                 res.json({ error: 'error' });
+            //                             } else {
+            //                                 jwt.sign({usuario:usuario.nombre},'secret',{expiresIn:'300s'},(err,token)=>{
+            //                                     res.json({
+            //                                         rs: 'usuarioCreado',
+            //                                         token:token
+            //                                     })
+            //                                 })
+            //                             }
+            //                         })
+            //                     }
+            //                 })
+            //             }
+            //         })
+            // })   
